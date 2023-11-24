@@ -1,6 +1,7 @@
 # Cloud-Web_PRJ
 -> 동작 설계도
-[오픈소스SW의 이해 프로젝트 리드미 PDF.pdf](https://github.com/LifeIsRightward/Cloud-Web_PRJ/files/13458073/SW.PDF.pdf)
+![image](https://github.com/LifeIsRightward/Cloud-Web_PRJ/assets/90908005/d642b66a-0e05-4d5d-84fa-c1f1859063a4)
+
 <br>
 <br>
 -> 발표자료
