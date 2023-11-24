@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <form method="post">
+        <input type="file" id="image_target" name="image_target" />
+        <input type="text" id="service_choice" name="service_choice" value=3>
+        <input type="submit" value="확인" onclick="test2(); return false;">
+    </form>
+
+    <script>
+        function test2() {
+            var form = $("form")[0];
+            var formData = new FormData(form);
+            // formData.append("image_target", $('#files').val());
+            // formData.append("service_choice", $('#service_choice').val());
+            console.log('form');
+            $.ajax({
+                cache: false,
+                url: "https://www.ailabapi.com/api/portrait/effects/emotion-editor",
+                processData: false,
+                contentType: false,
+                type: 'POST',
+                data: formData,
+                beforeSend: function (xhr) {
+                    xhr.setRequestHeader("ailabapi-api-key", "ajG2vx8c6IPDiWJhc6dEqRtFQBNzQ70UIUVS5jNko9illCpu3kDY71f4AJ8zbqnP"); //구글 아이디 별 키 값
+                    console.log('before');
+                },
+                success: function (response) {
+                    console.log('success'); //성공했을 때 찍히는 로그
+                    console.log(response.data.image); // 그 이미지 불러온거 base 64 인코딩된 문자열로 반환됨.
+                },
+
+                error: function (xhr, status) {
+                    alert(xhr + " : " + status);
+                }
+            });
+        }
+    </script>
+
+</body>
+
+
+</html>
