@@ -1,4 +1,4 @@
-# Cloud-Web_PRJ
+# OSS_SW_PRJ
 -> 동작 설계도
 ![image](https://github.com/LifeIsRightward/Cloud-Web_PRJ/assets/90908005/d642b66a-0e05-4d5d-84fa-c1f1859063a4)
 
